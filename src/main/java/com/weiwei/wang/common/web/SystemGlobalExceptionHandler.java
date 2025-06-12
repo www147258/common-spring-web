@@ -39,9 +39,10 @@ public class SystemGlobalExceptionHandler {
 
         }
         exceptionDataResponse.setUrlPath(urlPath);
+
         exceptionDataResponse.setExceptionName(e.getClass().getName());
 
-        exceptionDataResponse.setExceptionName(applicationName);
+        exceptionDataResponse.setServerName(applicationName);
 
         CommonResponse fail = CommonResponse.fail(ResponseExceptionEnum.SYSTEM_FAIL);
         fail.setData(exceptionDataResponse);
